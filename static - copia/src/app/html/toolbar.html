@@ -1,0 +1,33 @@
+<md-toolbar color="primary" >
+  <button md-icon-button (click)="sidenav.toggle()">
+    <md-icon>more_vert</md-icon>
+  </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item>
+      <md-icon>dialpad</md-icon>
+      <span>Redial</span>
+    </button>
+    <button md-menu-item disabled>
+      <md-icon>voicemail</md-icon>
+      <span>Check voicemail</span>
+    </button>
+    <button md-menu-item>
+      <md-icon>notifications_off</md-icon>
+      <span>Disable alerts</span>
+    </button>
+  </md-menu>
+  Ocha
+</md-toolbar>
+
+<md-sidenav-container class="example-sidenav-fab-container">
+  <md-sidenav #sidenav mode="side" opened="false">
+    <div class="example-scrolling-content">
+    </div>
+  </md-sidenav>
+  <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <md-icon>add</md-icon>
+  </button>
+  <div class="example-scrolling-content">
+
+  </div>
+</md-sidenav-container>
